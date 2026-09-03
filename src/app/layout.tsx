@@ -22,7 +22,11 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon" },
+    ],
+    apple: "/apple-icon",
   },
 };
 
