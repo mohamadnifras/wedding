@@ -7,15 +7,15 @@ export default function NikahDetails() {
   const scheduleEvents = [
     {
       time: "10:00 AM",
-      title: "Welcoming Guests",
-      description: "Warm reception of families, relatives, and well-wishers with traditional hospitality.",
-      icon: Users,
+      title: "Nikah Ceremony & Welcome",
+      description: "Solemnization of the holy Nikah ceremony and warm reception of families & guests.",
+      icon: Heart,
     },
     {
-      time: "11:30 AM",
-      title: "Nikah Ceremony & Royal Feast",
-      description: "Solemnization of marriage followed by a sumptuous traditional Kerala wedding luncheon.",
-      icon: Heart,
+      time: "12:00 PM",
+      title: "Royal Wedding Feast",
+      description: "Sumptuous traditional Kerala wedding luncheon served with grand hospitality.",
+      icon: Users,
     },
     {
       time: "01:30 PM",
