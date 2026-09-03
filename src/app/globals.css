@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --font-arabic: 'Amiri', serif;
+  --font-heading: 'Cinzel', serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-script: 'Alex Brush', cursive;
+  --font-sans: 'Montserrat', sans-serif;
+
+  --navy-deep: #0D1929;
+  --navy-royal: #1B365D;
+  --navy-soft: #2D4C73;
+  --navy-light: #EBF1F8;
+  
+  --gold-primary: #C5A880;
+  --gold-vibrant: #D4AF37;
+  --gold-light: #F4E8D3;
+  --gold-dark: #8C6B2D;
+  --gold-pale: #FAF4EB;
+  
+  --cream-bg: #FCFBF9;
+  --ivory-white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--cream-bg);
+  color: #2D3748;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy-royal);
+}
+
+/* Typography Classes */
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+.font-cinzel {
+  font-family: var(--font-heading);
+}
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Golden Shimmer & Text Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navy-gold-gradient {
+  background: linear-gradient(135deg, #0D1929 0%, #1B365D 50%, #2D4C73 100%);
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  box-shadow: 0 4px 20px rgba(197, 168, 128, 0.15);
+}
+
+.gold-border-glow:hover {
+  border-color: rgba(212, 175, 55, 0.8);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.25);
+}
+
+/* Royal Arch Islamic Pattern */
+.islamic-geo-bg {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(27, 54, 93, 0.03) 0%, transparent 60%),
+    repeating-linear-gradient(45deg, rgba(197, 168, 128, 0.05) 0, rgba(197, 168, 128, 0.05) 1px, transparent 0, transparent 40px),
+    repeating-linear-gradient(-45deg, rgba(197, 168, 128, 0.05) 0, rgba(197, 168, 128, 0.05) 1px, transparent 0, transparent 40px);
+}
+
+.hero-arch-frame {
+  position: relative;
+  border: 1px solid rgba(197, 168, 128, 0.5);
+  border-radius: 200px 200px 24px 24px;
+}
+
+.hero-arch-frame::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px dashed rgba(197, 168, 128, 0.35);
+  border-radius: 208px 208px 32px 32px;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4), inset 0 0 15px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.8), inset 0 0 25px rgba(212, 175, 55, 0.4);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.float-gentle {
+  animation: floatGentle 4s infinite ease-in-out;
+}
+
+@keyframes shimmerEffect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #1B365D 0%, #D4AF37 50%, #1B365D 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerEffect 4s linear infinite;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+.glass-panel-dark {
+  background: rgba(13, 25, 41, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Door Corner Geometry */
+.door-corner {
+  position: absolute;
+  width: clamp(40px, 6vw, 70px);
+  height: clamp(40px, 6vw, 70px);
+  border-color: var(--gold-primary);
+  border-style: solid;
+  opacity: 0.6;
+}
+.door-corner.tl { top: 24px; left: 24px; border-width: 2px 0 0 2px; }
+.door-corner.tr { top: 24px; right: 24px; border-width: 2px 2px 0 0; }
+.door-corner.bl { bottom: 24px; left: 24px; border-width: 0 0 2px 2px; }
+.door-corner.br { bottom: 24px; right: 24px; border-width: 0 2px 2px 0; }
